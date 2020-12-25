@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaAngleDoubleRight } from 'react-icons/fa';
-
+import './App.css';
+import Buttons from './Buttons';
+import Job from './Job';
 const url = 'https://course-api.com/react-tabs-project';
 
 const App = () => {
@@ -25,7 +27,17 @@ const App = () => {
       <h1>loading...</h1>
     </section>
   }
-  return <h1>we start =)</h1>
+  console.log(jobs);
+  return <section className="section">
+    <div className="title">
+      <h2>experience</h2>
+      <div className="underline"></div>
+    </div>
+    <div className="jobs-center">
+      <Buttons jobs={jobs} value={value} setValue={setValue} />
+      <Job />
+    </div>
+  </section>
 }
 
 export default App;
