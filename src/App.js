@@ -35,7 +35,7 @@ const App = () => {
     </div>
     <div className="jobs-center">
       <Buttons jobs={jobs} value={value} setValue={setValue} />
-      <Job />
+      <Job jobs={jobs} value={value} />
     </div>
   </section>
 }
